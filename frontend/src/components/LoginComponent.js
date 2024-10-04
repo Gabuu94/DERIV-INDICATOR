@@ -14,7 +14,7 @@ const LoginComponent = ({ onLoginSuccess }) => {
     setMessage(''); // Clear previous messages
 
     try {
-      const res = await axios.post('http://localhost:5000/login', { email, password });
+      const res = await axios.post('http://147.79.102.161:5000/login', { email, password });
       const token = res.data.token;
       setMessage('Login successful');
       onLoginSuccess(token); // Store token

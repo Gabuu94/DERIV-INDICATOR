@@ -8,7 +8,7 @@ const RegisterClient = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/register', { email });
+      const res = await axios.post('http://147.79.102.161:5000/register', { email });
       setResponse(`Client Registered: ${res.data.email}, Password: ${res.data.password}`);
     } catch (error) {
       setResponse('Registration failed. Please try again.');
